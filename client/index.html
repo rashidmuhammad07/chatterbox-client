@@ -7,6 +7,7 @@
 
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -26,7 +27,25 @@
     <div id="main">
       <h1>chatterbox</h1>
       <!-- Your HTML goes here! -->
+      <p>Room:</p>
+        <div id = 'roomSelect'>
+          <select>
+            <option id='dropDown'>
+              <option id='newRoom'>New room </option>
+            
+            </option>
+          </select>
+        </div>
+      
+       <div id = "value">
+         <input type="input" value='' id = "input">      
+         <button id = "refresh">Submit</button>
+       </div>
     </div>
     <div id="chats"></div>
   </body>
 </html>
+
+<!-- 
+$("#refresh").click(function())
+ -->
