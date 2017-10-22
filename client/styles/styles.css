@@ -88,6 +88,10 @@ form input[type=text] {
     background-color: #0090da;
 }
 
-#dropDown{
+#chats {
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  background: white;
 }
 

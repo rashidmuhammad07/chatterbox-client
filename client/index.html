@@ -25,24 +25,27 @@
   </head>
   <body>
     <div id="main">
+
       <h1>chatterbox</h1>
-      <!-- Your HTML goes here! -->
-      <p>Room:</p>
-        <div id = 'roomSelect'>
-          <select>
-            <option id='dropDown'>
-              <option id='newRoom'>New room </option>
-            
-            </option>
-          </select>
-        </div>
-      
-       <div id = "value">
-         <input type="input" value='' id = "input">      
-         <button id = "refresh">Submit</button>
-       </div>
+      <!-- Room dropdown section -->
+      <span>Room:</span>
+        
+        <select id = 'roomSelect' onchange ="app.renderRoom()">
+            <option value= "New room..">New room..
+        </select>
+        <button type="button" onClick="window.location.reload();">Refresh</button>
+        </br></br>
+      <!-- message submit section -->
+      <form action ="#" id ="send" method ="post" onsubmit ="app.handleSubmit()">
+         <input type="text" name='message' id = "message">      
+         <input type = "submit" name ="submit" class ="submit" onsubmit ="app.handleSubmit()">
+      </form>
+     <div id="chats"></div>
     </div>
-    <div id="chats"></div>
+   <script>
+    app.handleSubmit()
+    app.fetch();
+   </script>
   </body>
 </html>
 
